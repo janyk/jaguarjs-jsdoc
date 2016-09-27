@@ -204,6 +204,7 @@ function buildNav(members) {
 
     if (members.namespaces.length) {
         _.each(members.namespaces, function (v) {
+            if (v.memberof) return;
             nav.push({
                 type: 'namespace',
                 longname: v.longname,
